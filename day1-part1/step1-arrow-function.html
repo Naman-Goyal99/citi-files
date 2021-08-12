@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // default parameters
+       /*  function adder(num1 = 0, num2 = 0){
+            return num1 + num2;
+        };
+        console.log(adder(5,6));// 11
+        console.log(adder(5));// 11
+        console.log(adder(null,6));// 11 */
+
+        // function declaration
+       /*  function adder(num1, num2){
+            return num1 + num2;
+        }; */
+        
+        // function expression
+       /*  let adder = function (num1, num2){
+            return num1 + num2;
+        }; */
+
+        // fat arrow
+        /* let adder = (num1, num2)=>{
+            return num1 + num2;
+        }; */
+
+       // let adder = (num1, num2)=> num1 + num2;
+
+       // let adder = (num1)=> num1 + num1;
+/* 
+        let adder = num1 => num1 + num1;
+
+        console.log(adder(5));// 10  */
+        /* let shop = {
+            getCostPrice : function(){
+                return 100;
+            },
+            getSellingPrice : function(){
+                let addProfit = function(scope){
+                   return scope.getCostPrice() * 0.2;
+                }
+                return this.getCostPrice() + addProfit(this);
+            }
+        }; */
+        /*        
+            let shop = {
+            getCostPrice : function(){
+                return 100;
+            },
+            getSellingPrice : function(){
+                let scope = this;
+                let addProfit = function(){
+                   return scope.getCostPrice() * 0.2;
+                }
+                return this.getCostPrice() + addProfit();
+            }
+        }; */
+        var getCostPrice = function(){
+            return 1000;
+        }
+        var shop = {
+            getCostPrice : function(){
+                return 100;
+            },
+            getSellingPrice : ()=>{
+                var addProfit = ()=>{
+                   return this.getCostPrice() * 0.2;
+                }
+                return this.getCostPrice() + addProfit();
+            }
+        };
+
+        console.log(shop.getCostPrice());// 100
+        console.log(shop.getSellingPrice());// 120
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

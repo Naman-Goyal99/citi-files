@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hero = {
+            title : "Bruce"
+        };
+        // composition
+        function addpower(pow){
+            return function(human){
+                return {
+                    title : human.title,
+                    power : pow
+                }
+            }
+        };
+
+       /*  let fun = addpower(5);
+        console.log( fun(hero) ); */
+
+        hero = addpower(5)(hero);
+        console.log(hero);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "step1-fun",
+  "version": "1.0.0",
+  "description": "this is my first module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "citi",
+    "bengaluru",
+    "vijay"
+  ],
+  "author": "vijay",
+  "license": "ISC"
+}
